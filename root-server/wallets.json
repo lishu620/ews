@@ -1,0 +1,16 @@
+{
+  "m1ishu": {
+    "publicKey": {
+      "crv": "P-256",
+      "ext": true,
+      "key_ops": [
+        "verify"
+      ],
+      "kty": "EC",
+      "x": "YkaE3-tqlaAu7dDnNJqc8P1E_AEVxN-bMUm__eYoiSY",
+      "y": "zNEj2_WTv0JCDQ-6LO4Wl7KVBEHiP9hK3ZQpjoctHJw"
+    },
+    "registeredAt": "A",
+    "timestamp": "2025-06-27T16:53:14.037Z"
+  }
+}

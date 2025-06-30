@@ -1,0 +1,25 @@
+{
+  "name": "m1ishu",
+  "createdAt": "2025-06-28T12:48:27.433Z",
+  "publicKey": {
+    "crv": "P-256",
+    "ext": true,
+    "key_ops": [
+      "verify"
+    ],
+    "kty": "EC",
+    "x": "Mds8OALjFHxhscO5kK4-xPuRy_lM4LhrqSyHW5xQ9PA",
+    "y": "qABNHpHiFvA7foD0sB7yq9jPqJ__SIp8u0NXubx1oIU"
+  },
+  "privateKey": {
+    "crv": "P-256",
+    "d": "Jd0WMg0CB6rQkbk7q5qw7OQFoj-wL3VuR1eaoddepB4",
+    "ext": true,
+    "key_ops": [
+      "sign"
+    ],
+    "kty": "EC",
+    "x": "Mds8OALjFHxhscO5kK4-xPuRy_lM4LhrqSyHW5xQ9PA",
+    "y": "qABNHpHiFvA7foD0sB7yq9jPqJ__SIp8u0NXubx1oIU"
+  }
+}

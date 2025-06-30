@@ -1,0 +1,5 @@
+先运行root的index
+node root-server/index.js
+然后运行server-a的index
+node server-a/index.js
+然后运行网页就行

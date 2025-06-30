@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>注册密钥生成</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    .code-box { background: #f0f0f0; padding: 10px; font-family: monospace; margin-top: 10px; }
+    button { padding: 6px 12px; }
+  </style>
+</head>
+<body>
+  <h1>🧩 辅助服务器注册密钥生成器</h1>
+  <form id="keyForm">
+    <label for="sname">请输入服务器名称：</label>
+    <input id="sname" name="sname" required>
+    <button type="submit">生成密钥</button>
+  </form>
+
+  <div id="result" style="margin-top: 20px;"></div>
+
+  <script>
+    const form = document.getElementById('keyForm');
+    const result = document.getElementById('result');
+    form.onsubmit = async (e) => {
+      e.preventDefault();
+      const sname = form.sname.value;
+      const res = await fetch('/registerkey', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ sname })
+      });
+      const data = await res.json();
+      result.innerHTML = `
+        <h3>✅ 注册成功</h3>
+        <div class="code-box">SID: ${data.sid}</div>
+        <div class="code-box">SKEY: ${data.skey}</div>
+        <p>请将这两个值填入辅助服务器的 <code>.esk</code> 文件中</p>
+      `;
+    };
+  </script>
+</body>
+</html>

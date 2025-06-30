@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <title>EMO 钱包系统</title>
+  <script defer src="script.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-6 text-gray-800">
+  <div class="max-w-xl mx-auto bg-white p-6 rounded shadow space-y-6">
+    <h1 class="text-2xl font-bold">💼 EMO 钱包系统</h1>
+
+    <section id="create-wallet">
+      <h2 class="text-xl font-semibold">🧾 创建钱包</h2>
+      <input id="wallet-name" type="text" placeholder="钱包名称" class="border p-2 w-full my-2">
+      <button onclick="createWallet()" class="bg-blue-500 text-white px-4 py-2 rounded">生成 .emo 文件</button>
+    </section>
+
+    <section id="register-wallet">
+      <h2 class="text-xl font-semibold">📝 注册钱包</h2>
+      <input id="emo-file" type="file" class="my-2" />
+      <button onclick="registerWallet()" class="bg-green-600 text-white px-4 py-2 rounded">注册到服务器A</button>
+    </section>
+
+    <section id="query-wallet">
+      <h2 class="text-xl font-semibold">🔍 查询钱包</h2>
+      <input id="query-name" type="text" placeholder="钱包名称" class="border p-2 w-full my-2">
+      <button onclick="queryWallet()" class="bg-gray-700 text-white px-4 py-2 rounded">查询</button>
+    </section>
+
+    <pre id="output" class="bg-gray-100 text-sm p-4 border rounded whitespace-pre-wrap"></pre>
+  </div>
+</body>
+</html>
